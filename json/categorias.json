@@ -11,7 +11,7 @@
         "descripcion": "La mejor seleccion de golozinas",
        },
        "3": {
-        "id_categoria": 1,
+        "id_categoria": 3,
         "nombre": "Chocolates",
         "descripcion": "Los mejores productos de chocolate",
        },
