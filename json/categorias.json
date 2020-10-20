@@ -1,0 +1,23 @@
+}
+
+     "1": {
+        "id_categoria": 1,
+        "nombre": "Alfajores",
+        "descripcion": "La mejor seleccion de alfajores",
+       },
+       "2": {
+        "id_categoria": 2,
+        "nombre": "Golosinas",
+        "descripcion": "La mejor seleccion de golozinas",
+       },
+       "3": {
+        "id_categoria": 3,
+        "nombre": "Chocolates",
+        "descripcion": "Los mejores productos de chocolate",
+       },
+       "4": {
+        "id_categoria": 4,
+        "nombre": "Otros",
+        "descripcion": "Productos varios de la mejor calidad",
+       },
+}
