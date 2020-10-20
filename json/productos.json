@@ -2,7 +2,7 @@
     "1": {
         "id_producto": 1,
         "nombre": "Alfajor Fulbito",
-        "descripcion": "Alfajores sabor mani y chocolates x24 U",
+        "descripcion": "Alfajores sabor mani y chocolate x24 U",
         "precio": 514,
         "id_categoria": 1
     },
@@ -28,9 +28,125 @@
         "id_categoria": 1
     }
     "5": {
-        "id_producto": 4,
+        "id_producto": 5,
         "nombre": "Alfajor Havanna",
         "descripcion": "Los mejores alfajores en promo de estuche x6 U",
         "precio": 495,
         "id_categoria": 1
+    }
+     "6": {
+        "id_producto": 6,
+        "nombre": "Felfort Paraguitas",
+        "descripcion": "Chupetines de gran sabor y calidad x40 U",
+        "precio": 1060,
+        "id_categoria": 2
+    }
+     "7": {
+        "id_producto": 7,
+        "nombre": "Lheritier pico dulce",
+        "descripcion": "Chupetines sabor frutal x48 U",
+        "precio": 465,
+        "id_categoria": 2
+     }
+     "8": {
+        "id_producto": 8,
+        "nombre": "Lucky 8",
+        "descripcion": "Caramelos surtidos",
+        "precio": 385,
+        "id_categoria": 2
+    }
+     "9": {
+        "id_producto": 9,
+        "nombre": "Yummy Gomitas",
+        "descripcion": "Osos de gomas con increible sabor x12 U",
+        "precio": 198,
+        "id_categoria": 2
+    }
+     "10": {
+        "id_producto": 10,
+        "nombre": "Arcor",
+        "descripcion": "Turron de mani delicioso x50 U",
+        "precio": 699,
+        "id_categoria": 2
+    }
+ }
+     "11": {
+        "id_producto": 11,
+        "nombre": "Aguila",
+        "descripcion": "Chocolate para taza extrafino 15 U",
+        "precio": 3694,
+        "id_categoria": 3
+    }
+ }
+     "12": {
+        "id_producto": 12,
+        "nombre": "Felfort Diabfort",
+        "descripcion": "Chocolates sin azucar de gran calidad x20 U",
+        "precio": 2319,
+        "id_categoria": 3
+    }
+ }
+     "13": {
+        "id_producto": 13,
+        "nombre": "Felfort Dos corazones",
+        "descripcion": "Deliciosos bombones de chocolate x 20 U",
+        "precio": 779,
+        "id_categoria": 3
+    }
+ }
+     "14": {
+        "id_producto": 14,
+        "nombre": "Bon o Bon Bocaditos",
+        "descripcion": " Ricos bombones de chocolate",
+        "precio": 398,
+        "id_categoria": 3
+    }
+ }
+     "15": {
+        "id_producto": 15,
+        "nombre": "Oblita Bombon",
+        "descripcion": "Ricos Bombones de chocolate x 30 U",
+        "precio": 309,
+        "id_categoria": 3
+    }
+ }
+     "16": {
+        "id_producto": 16,
+        "nombre": "Vauquita",
+        "descripcion": "Deliciosa tableta de dulce de leche x 18 U",
+        "precio": 440,
+        "id_categoria": 4
+    }
+ }
+     "17": {
+        "id_producto": 17,
+        "nombre": "Oblita",
+        "descripcion": "Cubanitos de gran calidad x 48 U",
+        "precio": 209,
+        "id_categoria": 4
+    }
+ }
+     "18": {
+        "id_producto": 18,
+        "nombre": "Mantecol",
+        "descripcion": "Barra de mantecol a buen precio",
+        "precio": 192,
+        "id_categoria": 4
+    }
+ }
+     "19": {
+        "id_producto": 19,
+        "nombre": "Nutella",
+        "descripcion": "Deliciosa pasta de avellanas de la mejor marca 350grs",
+        "precio": 352,
+        "id_categoria": 4
+    }
+ }
+     "20": {
+        "id_producto": 20,
+        "nombre": "Pipas",
+        "descripcion": "Semillas de girasol con/sin sal",
+        "precio": 385,
+        "id_categoria": 4
+    }
 }
