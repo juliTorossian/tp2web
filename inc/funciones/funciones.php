@@ -8,4 +8,10 @@ function ExportArrayToJson($array, $carpeta, $archivo){
     fclose($fp);
 }
 
+function MostrarArray($array){
+    echo '<pre>';
+    print_r($array);
+    echo '</pre>';
+}
+
 ?>

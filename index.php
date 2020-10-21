@@ -1,36 +1,38 @@
 <?php 
 
-$a_productos = array();
-$j_productos;
+$a_productos  = array();
+$a_categorias = array();
 
 $j_productos = file_get_contents('json\productos.json');
 $a_productos = json_decode($j_productos,true);
+$j_categorias = file_get_contents('json\categorias.json');
+$a_categorias = json_decode($j_categorias,true);
 
-// echo '<pre>';
-// print_r($a_productos);
-// echo '</pre>';
+// MostrarArray($a_productos);
 
-function CardProductoHome($array){
-    foreach ($array as $key=> $value) {
-        // echo "key: $key";
-        // echo '<pre>';
-        // print_r($value);
-        // echo '</pre>';
-        // echo $array[$value]["nombre"];
-        $nombre = $array[$key]["nombre"];
-        $precio = $array[$key]["precio"];
-        $descip = $array[$key]["descripcion"];
+function CardProductoHome($produtos_a){
+  foreach ($produtos_a as $key => $value) {
+    $nombrePro = $produtos_a[$key]["nombre"];
+    $precioPro = $produtos_a[$key]["precio"];
+    $descPro   = $produtos_a[$key]["descripcion"];
+    $descImg   = "http://placehold.it/700x400";
 
-        echo '<div class="col-lg-4 col-md-6 mb-4"><div class="card h-100">';
-        echo '<a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>';
-        echo '<div class="card-body"><h4 class="card-title" ><a href="#">'.$nombre.'</a></h4>';
-        echo '<h5>$'.$precio.'</h5>';
-        echo '<p class="card-text">'.$descip.'</p></div>';
-        echo '<div class="card-footer"><small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small></div></div></div>';
-    }
+    echo '<div class="col-lg-4 col-md-6 mb-4"><div class="card h-100">';
+    echo '<a href="#"><img class="card-img-top" src='.$descImg.' alt=""></a>';
+    echo '<div class="card-body"><h4 class="card-title" ><a href="#">'.$nombrePro.'</a></h4>';
+    echo '<h5>$'.$precioPro.'</h5>';
+    echo '<p class="card-text">'.$descPro.'</p></div>';
+    echo '<div class="card-footer"><small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small></div></div></div>';
+  }
 }
-function ListaDeCategorias($array){
-    
+
+function ListaDeCategorias($categorias_a){
+  echo '<div class="list-group">';
+  foreach ($categorias_a as $key => $value) {
+    $nombreCat = $categorias_a[$key]["nombre"];
+    echo '<a href="#" class="list-group-item">'.$nombreCat.'</a>';
+  }
+  echo '</div>';
 }
 
 ?>
@@ -89,7 +91,7 @@ function ListaDeCategorias($array){
   <!-- Page Content -->
   <div class="container">
 
-    <div >
+    <div class="center-block">
         <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
         <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -121,48 +123,19 @@ function ListaDeCategorias($array){
     <div class="row">
 
       <div class="col-lg-3">
-
-        <h1 class="my-4">Shop Name</h1>
-        <div class="list-group">
+        <h1 class="my-4">Categorias</h1>
+        <?php ListaDeCategorias($a_categorias);?>
+        <!-- <div class="list-group">
           <a href="#" class="list-group-item">Category 1</a>
           <a href="#" class="list-group-item">Category 2</a>
           <a href="#" class="list-group-item">Category 3</a>
-        </div>
-
-      </div>
-      <!-- /.col-lg-3 -->
-
-      <div class="col-lg-9">
-
-        <!-- <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
-            </div>
-            <div class="carousel-item">
-              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
         </div> -->
 
+      </div>
+
+      <div class="col-lg-9">
         <div class="row">
-            <?php CardProductoHome($a_productos);?>
+          <?php CardProductoHome($a_productos);?>
 
           <!-- <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
@@ -178,106 +151,17 @@ function ListaDeCategorias($array){
                 <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
               </div>
             </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item Two</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item Three</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item Four</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item Five</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item Six</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
           </div> -->
-
         </div>
-        <!-- /.row -->
-
       </div>
-      <!-- /.col-lg-9 -->
-
     </div>
-    <!-- /.row -->
-
   </div>
-  <!-- /.container -->
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
     </div>
-    <!-- /.container -->
   </footer>
 
   <!-- Bootstrap core JavaScript -->
