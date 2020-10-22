@@ -1,10 +1,12 @@
 <?php 
 
+require_once('inc\funciones\funciones.php');
+
 $a_productos  = array();
 $a_categorias = array();
 
-$j_productos = file_get_contents('json\productos.json');
-$a_productos = json_decode($j_productos,true);
+$j_productos  = file_get_contents('json\productos.json');
+$a_productos  = json_decode($j_productos,true);
 $j_categorias = file_get_contents('json\categorias.json');
 $a_categorias = json_decode($j_categorias,true);
 
@@ -17,12 +19,15 @@ function CardProductoHome($produtos_a){
     $descPro   = $produtos_a[$key]["descripcion"];
     $descImg   = "http://placehold.it/700x400";
 
+    //<a href="destino.php?saludo=hola&texto=Esto es una variable texto">Paso variables saludo y texto a la página destino.php</a>
+
     echo '<div class="col-lg-4 col-md-6 mb-4"><div class="card h-100">';
-    echo '<a href="#"><img class="card-img-top" src='.$descImg.' alt=""></a>';
-    echo '<div class="card-body"><h4 class="card-title" ><a href="#">'.$nombrePro.'</a></h4>';
+    echo '<a href="detalleProducto.php?producto='.$key.'"><img class="card-img-top" src='.$descImg.' alt=""></a>';
+    echo '<div class="card-body"><h4 class="card-title" ><a href="detalleProducto.php?producto='.$key.'">'.$nombrePro.'</a></h4>';
     echo '<h5>$'.$precioPro.'</h5>';
     echo '<p class="card-text">'.$descPro.'</p></div>';
-    echo '<div class="card-footer"><small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small></div></div></div>';
+    echo '</div></div>';
+    //<div class="card-footer"><small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small></div>
   }
 }
 
@@ -59,71 +64,47 @@ function ListaDeCategorias($categorias_a){
 </head>
 
 <body>
+  <?php //require_once('detalleProducto.php');?>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">CandyLand</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <!-- Menu -->
+  <?php require_once('menu.php');?>
 
-  <!-- Page Content -->
+  <!-- Home -->
   <div class="container">
 
-    <div class="center-block">
-        <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
-        <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active">
-            <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
-        </div>
-        <div class="carousel-item">
-            <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
-        </div>
-        <div class="carousel-item">
-            <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">
-        </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-        </a>
-        </div>
+    <div class="d-flex justify-content-center">
+      <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+      <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">
+      </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+      </a>
+      </div>
     </div>
 
     <div class="row">
 
       <div class="col-lg-3">
-        <h1 class="my-4">Categorias</h1>
+        <h1 class="mb-4 text-center">Categorias</h1>
         <?php ListaDeCategorias($a_categorias);?>
         <!-- <div class="list-group">
           <a href="#" class="list-group-item">Category 1</a>
@@ -158,11 +139,7 @@ function ListaDeCategorias($categorias_a){
   </div>
 
   <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
-    </div>
-  </footer>
+  <?php require_once('footer.php');?>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
