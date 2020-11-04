@@ -3,7 +3,7 @@
         "id_producto": 1,
         "nombre": "Alfajor Fulbito",
         "descCorta": "Alfajores sabor mani y chocolate x24 U",
-        "descLarga": "24 Unidades alfajores marca Fulbito con un relleno del mejor mani y chocolate que encontraras,
+        "descLarga": "24 Unidades alfajores marca Fulbito con un relleno del mejor mani y chocolate que encontraras",
         "precio": 514,
         "id_categoria": 1
     },
@@ -11,7 +11,7 @@
         "id_producto": 2,
         "nombre": "Alfajor Jorgito",
         "descCorta": "Alfajor de buena calidad x24 U",
-        "descLarga": "24 Unidades de alfajores marca Jorgito de muy buena calidad que amaras,
+        "descLarga": "24 Unidades de alfajores marca Jorgito de muy buena calidad que amaras",
         "precio": 789,
         "id_categoria": 1
     },
@@ -19,7 +19,7 @@
         "id_producto": 3,
         "nombre": "Maxialfajor Jorgelin",
         "descCorta": "Alfajores de sabores mixtos x24 U",
-        "descLarga": "24 Unidades de alfajores marca Jorgelin con sabores variados que te encantaran,
+        "descLarga": "24 Unidades de alfajores marca Jorgelin con sabores variados que te encantaran",
         "precio": 869,
         "id_categoria": 1
     },
@@ -27,7 +27,7 @@
         "id_producto": 4,
         "nombre": "Alfajor Guaymallen",
         "descCorta": "Alfajores con chocolate triple x24 U",
-        "descLarga": "24 Unidades de alfajores marca Guaymallen acompañados de chocolate triple en su interior que amaras,
+        "descLarga": "24 Unidades de alfajores marca Guaymallen acompañados de chocolate triple en su interior que amaras",
         "precio": 455,
         "id_categoria": 1
     },
@@ -43,7 +43,7 @@
         "id_producto": 6,
         "nombre": "Felfort Paraguitas",
         "descCorta": "Chupetines de gran sabor y calidad x40 U",
-        "descLarga": "40 Unidades de Felfort Paraguitas de la mejor calidad y de lo todos los sabores que mas te gustan,
+        "descLarga": "40 Unidades de Felfort Paraguitas de la mejor calidad y de lo todos los sabores que mas te gustan",
         "precio": 1060,
         "id_categoria": 2
     },
@@ -51,7 +51,7 @@
         "id_producto": 7,
         "nombre": "Lheritier pico dulce",
         "descCorta": "Chupetines sabor frutal x48 U",
-        "descLarga": "48 Unidades de chupetines Lhertitier pico dulce con el mejor sabor frutal que puedas encontrar,
+        "descLarga": "48 Unidades de chupetines Lhertitier pico dulce con el mejor sabor frutal que puedas encontrar",
         "precio": 465,
         "id_categoria": 2
      },
@@ -67,7 +67,7 @@
         "id_producto": 9,
         "nombre": "Yummy Gomitas",
         "descCorta": "Osos de gomas con increible sabor x12 U",
-        "descLarga": "12 Unidades de gomitas en forma de oso con un increible sabor de la marca Yummy Gomitas,
+        "descLarga": "12 Unidades de gomitas en forma de oso con un increible sabor de la marca Yummy Gomitas",
         "precio": 198,
         "id_categoria": 2
     },
