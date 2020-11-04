@@ -3,23 +3,22 @@
 require_once('inc\funciones\funciones.php');
 
 $a_productos = array();
-$j_productos = file_get_contents('json\productos.json');
-$a_productos = json_decode($j_productos,true);
+$a_productos = json_decode(file_get_contents('json\productos.json'),true);
 
-// MostrarArray($a_productos);
+//MostrarArray($a_productos);
 
-function DetalleProducto($produtos_a, $id_prodcuto){
+// function DetalleProducto($produtos_a, $id_prodcuto){
     
-    $nombreProducto = $produtos_a[$id_prodcuto]["nombre"];
-    $detalleProducto = $produtos_a[$id_prodcuto]["descLarga"];
-    $imgProducto =  "inc\\imagenes\\".$nombreProducto."\\".$nombreProducto."_max.jpg";
+//     $nombreProducto = $produtos_a[$id_prodcuto]["nombre"];
+//     $detalleProducto = $produtos_a[$id_prodcuto]["descLarga"];
+//     $imgProducto =  "inc\\imagenes\\".$nombreProducto."\\".$nombreProducto."_max.jpg";
 
-    echo '<div class="col-lg-7">';
-    echo '<img class="card-img-top" src="'.$imgProducto.'" alt=""></div>';
-    echo '<div class="col-lg-5 px-2 text-center">';
-    echo '<h2 class="h3 my-4">'.$nombreProducto.'</h2>';
-    echo '<h3 class="h4 mt-2">'.$detalleProducto.'</h3></div>';
-}
+//     echo '<div class="col-lg-7">';
+//     echo '<img class="card-img-top" src="'.$imgProducto.'" alt=""></div>';
+//     echo '<div class="col-lg-5 px-2 text-center">';
+//     echo '<h2 class="h3 my-4">'.$nombreProducto.'</h2>';
+//     echo '<h3 class="h4 mt-2">'.$detalleProducto.'</h3></div>';
+// }
 
 function AñadirComentario($mail, $cali, $comm, $id_prodcuto){
   $a_comentarios = array();
@@ -103,7 +102,24 @@ function cargarComentarios($id_producto){
     <div class="container my-5 mt-5">
 
       <div class="row">
-        <?php DetalleProducto($a_productos, $_GET["producto"]); ?>
+        <?php //DetalleProducto($a_productos, $_GET["producto"]);
+          $id_producto = $_GET["producto"];
+          $nombrePro = $a_productos[$id_producto]["nombre"];
+          $detallePro = $a_productos[$id_producto]["descLarga"];
+          $imgPro =  "inc\\imagenes\\".$nombrePro."\\".$nombrePro."_max.jpg";
+        ?>
+
+
+        <div class="col-lg-7">
+          <img class="card-img-top" src="<?php $imgPro;?>" alt="">
+        </div>
+        <div class="col-lg-5 px-2 text-center">
+          <h2 class="h3 my-4"><?php $nombrePro;?></h2>
+          <h3 class="h4 mt-2"><?php $detallePro;?></h3>
+        </div>
+        
+        
+        
       </div>
 
       <div class="m-5 p-4">
