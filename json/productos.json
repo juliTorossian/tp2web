@@ -5,6 +5,8 @@
         "descCorta": "Alfajores sabor mani y chocolate x24 U",
         "descLarga": "24 Unidades alfajores marca Fulbito con un relleno del mejor mani y chocolate que encontraras",
         "precio": 514,
+        "promo": "no",
+        "descuento": 0,
         "id_categoria": 1
     },
     "2": {
@@ -13,6 +15,8 @@
         "descCorta": "Alfajor de buena calidad x24 U",
         "descLarga": "24 Unidades de alfajores marca Jorgito de muy buena calidad que amaras",
         "precio": 789,
+        "promo": "no",
+        "descuento": 0,
         "id_categoria": 1
     },
     "3": {
@@ -21,6 +25,8 @@
         "descCorta": "Alfajores de sabores mixtos x24 U",
         "descLarga": "24 Unidades de alfajores marca Jorgelin con sabores variados que te encantaran",
         "precio": 869,
+        "promo": "no",
+        "descuento": 0,
         "id_categoria": 1
     },
     "4": {
@@ -29,6 +35,8 @@
         "descCorta": "Alfajores con chocolate triple x24 U",
         "descLarga": "24 Unidades de alfajores marca Guaymallen acompañados de chocolate triple en su interior que amaras",
         "precio": 455,
+        "promo": "si",
+        "descuento": 20,
         "id_categoria": 1
     },
     "5": {
@@ -37,6 +45,8 @@
         "descCorta": "Los mejores alfajores en promo de estuche x6 U",
         "descLarga": " Promocion de 6 Unidades de alfajores marca Havanna del sabor que guste y de la mejor calidad",
         "precio": 495,
+        "promo": "no",
+        "descuento": 0,
         "id_categoria": 1
     },
      "6": {
@@ -45,6 +55,8 @@
         "descCorta": "Chupetines de gran sabor y calidad x40 U",
         "descLarga": "40 Unidades de Felfort Paraguitas de la mejor calidad y de lo todos los sabores que mas te gustan",
         "precio": 1060,
+        "promo": "no",
+        "descuento": 0,
         "id_categoria": 2
     },
      "7": {
@@ -53,6 +65,8 @@
         "descCorta": "Chupetines sabor frutal x48 U",
         "descLarga": "48 Unidades de chupetines Lhertitier pico dulce con el mejor sabor frutal que puedas encontrar",
         "precio": 465,
+        "promo": "no",
+        "descuento": 0,
         "id_categoria": 2
      },
      "8": {
@@ -61,6 +75,8 @@
         "descCorta": "Caramelos surtidos",
         "descLarga": "Caramelos surtidos de varios de los mejores sabores que hay, marca Lucky 8",
         "precio": 385,
+        "promo": "no",
+        "descuento": 0,
         "id_categoria": 2
     },
      "9": {
@@ -69,6 +85,8 @@
         "descCorta": "Osos de gomas con increible sabor x12 U",
         "descLarga": "12 Unidades de gomitas en forma de oso con un increible sabor de la marca Yummy Gomitas",
         "precio": 198,
+        "promo": "no",
+        "descuento": 0,
         "id_categoria": 2
     },
      "10": {
@@ -77,6 +95,8 @@
         "descCorta": "Turron de mani delicioso x50 U",
         "descLarga": "50 Unidades de Turron con sabor a mani de la marca Arcor",
         "precio": 699,
+        "promo": "no",
+        "descuento": 0,
         "id_categoria": 2
     },
  
@@ -86,6 +106,8 @@
         "descCorta": "Chocolate para taza extrafino 15 U",
         "descLarga": "15 unidades de Chocolate para taza de una calidad extrafina marca Aguila",
         "precio": 3694,
+        "promo": "no",
+        "descuento": 0,
         "id_categoria": 3
     },
  
@@ -95,6 +117,8 @@
         "descCorta": "Chocolates sin azucar de gran calidad x20 U",
         "descLarga": "20 Unidades de los mejores chocolates sin azucar de la mejor calidad, marca Felfort Daibfort",
         "precio": 2319,
+        "promo": "no",
+        "descuento": 0,
         "id_categoria": 3
     },
      "13": {
@@ -103,6 +127,8 @@
         "descCorta": "Deliciosos bombones de chocolate x 20 U",
         "descLarga": "20 Unidades de los mas deliciosos bombones de la mejor calidad, marca Felfort Dos Corazones",
         "precio": 779,
+        "promo": "si",
+        "descuento": 30,
         "id_categoria": 3
     },
  
@@ -112,6 +138,8 @@
         "descCorta": " Ricos bombones de chocolate",
         "descLarga": "Ricos bombones de chocolate de la marca Bon o Bon Bocaditos",
         "precio": 398,
+        "promo": "no",
+        "descuento": 0,
         "id_categoria": 3
     },
  
@@ -121,6 +149,8 @@
         "descCorta": "Ricos Bombones de chocolate x 30 U",
         "descLarga": "30 Unidades de los mejores Bombones de chocolates Oblita Bombon",
         "precio": 309,
+        "promo": "no",
+        "descuento": 0,
         "id_categoria": 3
     },
  
@@ -130,6 +160,8 @@
         "descCorta": "Deliciosa tableta de dulce de leche x 18 U",
         "descLarga": "18 Unidades de deliciosa tableta de dulce de leche de la marca Vauquita",
         "precio": 440,
+        "promo": "no",
+        "descuento": 0,
         "id_categoria": 4
     },
  
@@ -139,6 +171,8 @@
         "descCorta": "Cubanitos de gran calidad x 48 U",
         "descLarga": "48 Unidades de Cubanitos de gran calidad de la marca Oblita",
         "precio": 209,
+        "promo": "no",
+        "descuento": 0,
         "id_categoria": 4
     },
  
@@ -148,6 +182,8 @@
         "descCorta": "Barra de mantecol a buen precio",
         "descLarga": "Barra de mantecol marca Mantecol con el mejor de los precios",
         "precio": 192,
+        "promo": "si",
+        "descuento": 40,
         "id_categoria": 4
     },
  
@@ -157,6 +193,8 @@
         "descCorta": "Deliciosa pasta de avellanas de la mejor marca 350grs",
         "descLarga": "350 gramos de la mejor pasta de avellanas de la mundialmente conocida marca Nutella",
         "precio": 352,
+        "promo": "no",
+        "descuento": 0,
         "id_categoria": 4
     },
  
@@ -166,6 +204,8 @@
         "descCorta": "Semillas de girasol con/sin sal",
         "descLarga": "Semillas de girasol con o sin sal mas conocidas como las Pipas",
         "precio": 385,
+        "promo": "no",
+        "descuento": 0,
         "id_categoria": 4
     }
 }
