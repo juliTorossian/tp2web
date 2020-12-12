@@ -149,7 +149,7 @@ function cargarComentarios($id_producto){
       </div>
 
       <div class="m-5 p-4">
-        <form action="" method="post">
+        <form action="" method="post" onsubmit="alert('Comantario relizado!!')">
           <div class="row">
             <div class="col-6">
               <label>Email</label>
@@ -174,6 +174,17 @@ function cargarComentarios($id_producto){
           <button type="submit" name="submit" class="btn btn-info">Comentar</button>
         </form>
 
+        <?php 
+
+          if(isset($_POST['submit']))
+          {
+            if ($_POST['email']!='' and $_POST['calificacion']!='' and $_POST['comentario']!=''){
+              AñadirComentario($_POST['email'], $_POST['calificacion'], $_POST['comentario'],$_GET["producto"]);
+            }
+          }
+
+        ?>
+
         <div class="m-5 p-5 border border-dark rounded">
           <!--commentario-->
           <?php cargarComentarios($_GET["producto"]);?>
@@ -192,20 +203,3 @@ function cargarComentarios($id_producto){
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<?php 
-
-  if(isset($_POST['submit']))
-  {
-    // echo 'mail: '.$_POST['email'];
-    // echo 'calificacion: '.$_POST['calificacion'];
-    // echo 'comentario: '.$_POST['comentario'];
-
-    if ($_POST['email']!='' and $_POST['calificacion']!='' and $_POST['comentario']!=''){
-      AñadirComentario($_POST['email'], $_POST['calificacion'], $_POST['comentario'],$_GET["producto"]);
-      cargarComentarios($_GET["producto"]);
-      
-      header('Location: 'detalleProducto.php?producto=);
-    }
-  }
-
-?>

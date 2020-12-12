@@ -2,9 +2,11 @@
 
 require_once('inc\funciones\funciones.php');
 
+$envio = false;
+
 function AñadirContacto($mail, $nombre, $apellido, $telefono, $area,  $mensaje){
     $a_contactos = array();
-    echo(file_exists('json\contactos.json'));
+    //echo(file_exists('json\contactos.json'));
     if (file_exists('json\contactos.json')){
       $a_contactos = json_decode(file_get_contents('json\contactos.json'),true);
   
@@ -44,36 +46,26 @@ function AñadirContacto($mail, $nombre, $apellido, $telefono, $area,  $mensaje)
 
 <div class="container my-5" style="background-color: darkgray;">
 
-    <div class="row fade show" data-dismiss="alert" id="alertaEnvio">
-        <div class="col-4">
-            <div class="alert alert-success">
-                <button class="close" data-dismiss="alert"><span>&times;</span></button>
-                Mensaje enviado satisfactoriamente!
-            </div>
-        </div>
-    </div>
-
     <div class="row">
         <div class="col-6" style="display:table;margin: auto;"><!--   -->
             <h2 class="text-center">Contactenos</h2>
-            <form class="form-horizontal" method="post">
+            <form class="form-horizontal" method="post" onsubmit="MensajeEnviado()">
                 
                 <div class="row">
                     <div class="col-6">
                         <span class="col-md-1 col-md-offset-2 text-center"></span>
-                        <input id="fname" name="nombre" type="text" placeholder="Nombre" class="form-control">
+                        <input id="fname" name="nombre" type="text" placeholder="Nombre" class="form-control" required>
                     </div>
                     <div class="col-6">
                         <span class="col-md-1 col-md-offset-2 text-center"></span>
-                        <input id="lname" name="apellido" type="text" placeholder="Apellido" class="form-control">
+                        <input id="lname" name="apellido" type="text" placeholder="Apellido" class="form-control" required>
                     </div>
                 </div>
 
                 <div><!--   class="form-group" -->
                     <span class="col-md-1 col-md-offset-2 text-center"></span>
-                    <input id="email" name="email" type="text" placeholder="Email" class="form-control">
+                    <input id="email" name="email" type="text" placeholder="Email" class="form-control" required>
                 </div>
-
                 
                 <div class="row">
                     <div class="col-6">
@@ -112,9 +104,16 @@ function AñadirContacto($mail, $nombre, $apellido, $telefono, $area,  $mensaje)
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-<?php require_once('footer.php');
+<script type="text/javascript">
+function MensajeEnviado() {
+    alert('Mensaje enviado satisfactoriamente!');
+    <?php echo('Hola');?>
+}
+</script>
 
-if(isset($_POST['submit'])){
+<?php 
+
+if(isset($_POST['submit'])){    
     // echo 'mail: '.$_POST['email'];
     // echo 'calificacion: '.$_POST['nombre'];
     // echo 'comentario: '.$_POST['mensaje'];
@@ -123,5 +122,11 @@ if(isset($_POST['submit'])){
         AñadirContacto($_POST['email'], $_POST['nombre'], $_POST['apellido'], $_POST['telefono'], $_POST['area'],  $_POST['mensaje']);
     }
 }
+?>
 
+<?php require_once('footer.php'); 
+
+// require_once(footer.php) fue cambiado de la linea 109 a la 136
+
+// el div de la 113 hasta la 120 antes estaba en la linea 70
 ?>
