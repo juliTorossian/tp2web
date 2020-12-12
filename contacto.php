@@ -2,7 +2,7 @@
 
 require_once('inc\funciones\funciones.php');
 
-$envio = false;
+$title = 'Contactenos - CandyLand';
 
 function AñadirContacto($mail, $nombre, $apellido, $telefono, $area,  $mensaje){
     $a_contactos = array();

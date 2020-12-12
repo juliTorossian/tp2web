@@ -8,6 +8,7 @@ $a_productos = json_decode(file_get_contents('json\productos.json'),true);
 
 //MostrarArray($a_productos);
 
+$title = $a_productos[$_GET["producto"]]["nombre"] .' - CandyLand';
 
 function crearPDF_producto($id_pro, $a_pro){
   $pdf = new FPDF();

@@ -15,7 +15,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>CandyLand</title>
+  <title><?php echo($title);?></title>
   <link rel="icon" type="image/svg+xml" href="inc/imagenes/flaticon/candy.svg" sizes="any">
 
   <!-- Bootstrap core CSS -->

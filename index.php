@@ -1,7 +1,7 @@
 <?php 
 
 
-
+  $title = 'CandyLand';
 
   //Header
   require_once('header.php');
