@@ -101,7 +101,7 @@ function cargarComentarios($id_producto){
 //crearPDF_producto(11, $a_productos);
 
 ?>
-    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="css\style.css" rel="stylesheet">
 
     <!-- Header -->
@@ -117,6 +117,7 @@ function cargarComentarios($id_producto){
           $detallePro = $a_productos[$id_producto]["descLarga"];
           $precio = $a_productos[$id_producto]["precio"];
           $imgPro =  "inc\\imagenes\\".$nombrePro."\\".$nombrePro."_max.jpg";
+          $linkDesc = "inc\\funciones\\descargarPDF.php?producto=".$id_producto;
         ?>
 
 
@@ -124,7 +125,7 @@ function cargarComentarios($id_producto){
           <img class="card-img-top" src="<?php echo($imgPro);?>" alt="">
         </div>
         <div class="col-lg-5 px-2 text-center">
-          <h2 class="h3 my-4"><?php echo($nombrePro);?></h2>
+          <h2 class="h3 my-4"><?php echo($nombrePro);?><a href="<?php echo($linkDesc)?>">       <i class="far fa-file-pdf"></i></a></h2>
           <h3 class="h4 mt-2"><?php echo($detallePro);?></h3>
           <?php 
             if($a_productos[$id_producto]["promo"] == "si"){
@@ -198,6 +199,8 @@ function cargarComentarios($id_producto){
     <!-- Footer -->
     <?php require_once('footer.php');?>
     
+
+    </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

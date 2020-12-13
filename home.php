@@ -64,7 +64,7 @@ $a_categorias = json_decode($j_categorias,true);
         $nombreCat = $a_categorias[$key]["nombre"];
         $linkcategoria = "index.php?categoria=".$key;
       ?>
-        <a href="<?php echo ($linkcategoria);?>" class="list-group-item"><?php echo($nombreCat);?></a>
+        <a href="<?php echo ($linkcategoria);?>" class="list-group-item font-family-base"><?php echo($nombreCat);?></a>
 
       <?php }?>
     </div>

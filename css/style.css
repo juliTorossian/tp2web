@@ -138,3 +138,14 @@ body{
 .custom-toggler.navbar-toggler { 
   border-color: white; 
 } 
+
+.card {
+background-color: #cc9ae6
+
+
+
+}
+.list-group-item{
+
+  background-color: rgb(231, 120, 241);
+}
